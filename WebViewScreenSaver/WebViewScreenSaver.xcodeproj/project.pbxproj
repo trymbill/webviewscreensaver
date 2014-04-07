@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		64EED329120EC1B40048A830 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EED328120EC1B40048A830 /* WebKit.framework */; };
-		64EED3E9120EC6380048A830 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64EED3E8120EC6380048A830 /* ConfigureSheet.xib */; };
 		8D255AC70486D3F9007BF209 /* WebViewScreenSaver_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCFA80370C50100C91783 /* WebViewScreenSaver_Prefix.pch */; };
 		8D255AC80486D3F9007BF209 /* WebViewScreenSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = F50079790118B23001CA0E54 /* WebViewScreenSaverView.h */; };
 		8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -25,9 +24,8 @@
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCFA80370C50100C91783 /* WebViewScreenSaver_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewScreenSaver_Prefix.pch; sourceTree = "<group>"; };
 		64EED328120EC1B40048A830 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		64EED3E8120EC6380048A830 /* ConfigureSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 		8D255AD20486D3F9007BF209 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D255AD30486D3F9007BF209 /* WebViewScreenSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewScreenSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D255AD30486D3F9007BF209 /* ResonataStatusBoard.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResonataStatusBoard.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50079790118B23001CA0E54 /* WebViewScreenSaverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewScreenSaverView.h; sourceTree = "<group>"; };
 		F500797A0118B23001CA0E54 /* WebViewScreenSaverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewScreenSaverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +73,6 @@
 			children = (
 				8D255AD20486D3F9007BF209 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
-				64EED3E8120EC6380048A830 /* ConfigureSheet.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -92,7 +89,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D255AD30486D3F9007BF209 /* WebViewScreenSaver.saver */,
+				8D255AD30486D3F9007BF209 /* ResonataStatusBoard.saver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,7 +135,7 @@
 			name = WebViewScreenSaver;
 			productInstallPath = "$(HOME)/Library/Screen Savers";
 			productName = WebViewScreenSaver;
-			productReference = 8D255AD30486D3F9007BF209 /* WebViewScreenSaver.saver */;
+			productReference = 8D255AD30486D3F9007BF209 /* ResonataStatusBoard.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -146,6 +143,8 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = EF7AD73108BB986600CE4634 /* Build configuration list for PBXProject "WebViewScreenSaver" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -171,7 +170,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D255ACA0486D3F9007BF209 /* InfoPlist.strings in Resources */,
-				64EED3E9120EC6380048A830 /* ConfigureSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +228,8 @@
 		EF7AD72E08BB986600CE4634 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -238,7 +238,7 @@
 				GCC_PREFIX_HEADER = WebViewScreenSaver_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				PRODUCT_NAME = WebViewScreenSaver;
+				PRODUCT_NAME = ResonataStatusBoard;
 				WRAPPER_EXTENSION = saver;
 				ZERO_LINK = YES;
 			};
@@ -247,13 +247,15 @@
 		EF7AD72F08BB986600CE4634 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WebViewScreenSaver_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				PRODUCT_NAME = WebViewScreenSaver;
+				PRODUCT_NAME = ResonataStatusBoard;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
@@ -263,7 +265,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -278,7 +279,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
